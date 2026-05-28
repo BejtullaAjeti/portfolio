@@ -1,0 +1,24 @@
+<section id="experience">
+  <div class="section-label" appReveal>Experience</div>
+  <h2 class="section-title" appReveal>Where I've<br>shipped things.</h2>
+
+  <div class="exp-grid">
+    @for (item of experience; track item.company) {
+      <div class="exp-item" appReveal>
+        <div class="exp-meta">
+          <p class="exp-period">{{ item.period }}</p>
+          <p class="exp-company">{{ item.company }}</p>
+          <p class="exp-period">{{ item.location }}</p>
+        </div>
+        <div class="exp-body">
+          <p class="exp-role">{{ item.role }}</p>
+          <ul class="exp-points">
+            @for (point of item.points; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>

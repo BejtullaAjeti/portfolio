@@ -1,0 +1,18 @@
+<section id="certifications">
+  <div class="section-label" appReveal>Certifications</div>
+  <h2 class="section-title" appReveal>Credentials.</h2>
+
+  @for (cert of certifications; track cert.name) {
+    <div class="cert-item" appReveal>
+      <div class="cert-info">
+        <p class="cert-issuer">{{ cert.issuer }}</p>
+        @if (cert.credentialUrl) {
+          <a class="cert-name" [href]="cert.credentialUrl" target="_blank" rel="noopener">{{ cert.name }}</a>
+        } @else {
+          <p class="cert-name">{{ cert.name }}</p>
+        }
+      </div>
+      <p class="cert-date">{{ cert.date }}</p>
+    </div>
+  }
+</section>

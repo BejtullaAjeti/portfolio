@@ -1,0 +1,32 @@
+<div class="project-card">
+  @if (project.imageUrl) {
+    <img class="project-image" [src]="project.imageUrl" [alt]="project.name" />
+  }
+
+  <div class="project-header">
+    <span class="project-number">{{ project.number }}</span>
+    <div class="project-actions">
+      @if (project.githubUrl) {
+        <a class="project-link" [href]="project.githubUrl" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+      }
+      @if (project.liveUrl && !project.githubUrl) {
+        <a class="project-link" [href]="project.liveUrl" target="_blank" rel="noopener" aria-label="Live site">↗</a>
+      }
+    </div>
+  </div>
+
+  <h3 class="project-name">{{ project.name }}</h3>
+  <p class="project-desc">{{ project.description }}</p>
+
+  <div class="project-stack">
+    @for (tag of project.stack; track tag) {
+      <span class="tag">{{ tag }}</span>
+    }
+  </div>
+
+  @if (project.liveUrl && project.githubUrl) {
+    <div class="project-links">
+      <a [href]="project.liveUrl" target="_blank" rel="noopener" class="live-link">Live ↗</a>
+    </div>
+  }
+</div>

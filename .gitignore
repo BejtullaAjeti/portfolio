@@ -39,6 +39,16 @@ testem.log
 /typings
 __screenshots__/
 
+# Environment (sensitive config)
+src/environments/environment.development.ts
+src/environments/*.local.ts
+
+# No secrets ever
+.env
+.env.*
+*.pem
+*.key
+
 # System files
 .DS_Store
 Thumbs.db

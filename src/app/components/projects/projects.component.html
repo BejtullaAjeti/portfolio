@@ -1,0 +1,10 @@
+<section id="projects">
+  <div class="section-label" appReveal>Projects</div>
+  <h2 class="section-title" appReveal>Things I've<br>built.</h2>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.number) {
+      <app-project-card [project]="project" />
+    }
+  </div>
+</section>

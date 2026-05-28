@@ -1,0 +1,30 @@
+<section id="hero">
+  <div class="hero-line"></div>
+
+  <p class="hero-badge">{{ personal.title }}</p>
+
+  <h1 class="hero-name">
+    {{ personal.name.first }}<br>
+    <em>{{ personal.name.last }}</em>
+  </h1>
+
+  <div class="hero-sub">
+    <p class="hero-desc">{{ personal.tagline }}</p>
+    <div class="hero-links">
+      <a class="hero-link" [href]="personal.links.github" target="_blank" rel="noopener">
+        github.com/BejtullaAjeti
+      </a>
+      <a class="hero-link" [href]="personal.links.linkedin" target="_blank" rel="noopener">
+        linkedin.com/in/bejtulla-ajeti
+      </a>
+      <a class="hero-link" [href]="personal.links.itchio" target="_blank" rel="noopener">
+        b1t0o.itch.io
+      </a>
+      <a class="hero-link" [href]="'mailto:' + personal.email">
+        {{ personal.email }}
+      </a>
+    </div>
+  </div>
+
+  <span class="hero-scroll">Scroll to explore</span>
+</section>

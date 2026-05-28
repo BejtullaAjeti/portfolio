@@ -1,0 +1,17 @@
+<nav [class.scrolled]="scrolled()">
+  <a class="nav-logo" href="#hero">B<span>.</span>A</a>
+
+  <ul class="nav-links" [class.open]="menuOpen()">
+    <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
+    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+    <li><a href="#certifications" (click)="closeMenu()">Certifications</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
